@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.HistoriaClinica.HistoriaPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"         
+             Title="HistoriaPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <ScrollView>
+                <VerticalStackLayout Spacing="5" Padding="30" HorizontalOptions="Center" VerticalOptions="Start">
+
+                    <Label Text="Historia CLinica" 
+                   FontAttributes="Bold"
+                   TextColor="#4998d6"
+                   FontSize="20"
+                   HorizontalOptions="Center" />
+
+                    <Label Text="Completa tu historia Clinica" 
+                   FontAttributes="None" 
+                   HorizontalOptions="Center" 
+            
+                   Margin="0,0,0,5"/>
+                    <toolkit:Expander x:Name="ExpanderDatosPersonales">
+                        <toolkit:Expander.Header>
+                            <Frame>
+                                <Label Text="Formulario de Historia Clinica" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center" />
+                            </Frame>
+                        </toolkit:Expander.Header>
+                        <Frame BackgroundColor="#f1f9fa" BorderColor="Grey" CornerRadius="10" Padding="15" HorizontalOptions="FillAndExpand" Margin="10,10,10,5">
+                            <VerticalStackLayout Spacing="5" Padding="10">
+                                <Entry x:Name="NombrePacienteEntry" Placeholder="Nombre Paciente:"/>
+                                <HorizontalStackLayout  Margin="10">
+                                    <Label Text="Escoja el tipo de sangre" Margin="5"/>
+                                    <Picker x:Name="bloodTypePicker"/>
+                                </HorizontalStackLayout>
+                                <Entry x:Name="PesoEntry" Placeholder="Peso:" Keyboard="Numeric" Margin="0,0,0,5"/>
+                                <Entry x:Name="DireccionEntry" Placeholder="Direccion:" />
+                                <Entry x:Name="ReligionEntry" Placeholder="Religion:" />
+                                <Entry x:Name="OcupacionEntry" Placeholder="Ocupacion:" />
+                                <Entry x:Name="LugarResidenciaEntry" Placeholder="Lugar de Residencia:" />
+                                <Label Text="Indique la fecha de ingreso"/>
+                                <DatePicker x:Name="FechaIngresoEntry" />
+
+                            </VerticalStackLayout>
+
+
+                        </Frame>
+
+                    </toolkit:Expander>
+                    <toolkit:Expander x:Name="ExpanderPadecimientoActual">
+                        <toolkit:Expander.Header>
+                            <Frame>
+                                <Label Text="Padecimiento Actual" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center" />
+
+                            </Frame>
+                        </toolkit:Expander.Header>
+                        <Frame BackgroundColor="#f1f9fa" BorderColor="Grey" CornerRadius="10" Padding="15" HorizontalOptions="FillAndExpand" Margin="10,10,10,5">
+
+                            <VerticalStackLayout Spacing="5" Padding="10">
+
+                                <Editor Placeholder="Indique el padecimiento actual:" HeightRequest="150" x:Name="TextAreaPadecimiento"/>
+
+                            </VerticalStackLayout>
+
+
+                        </Frame>
+
+                    </toolkit:Expander >
+                    <toolkit:Expander x:Name="ExpanderSintomasGenerales">
+                        <toolkit:Expander.Header>
+                            <Frame>
+                                <Label Text="Sintomas Generales" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center" />
+
+                            </Frame>
+                        </toolkit:Expander.Header>
+                        <Frame BackgroundColor="#f1f9fa" BorderColor="Grey" CornerRadius="10" Padding="15" HorizontalOptions="FillAndExpand" Margin="10,10,10,5">
+
+                            <VerticalStackLayout Spacing="5" Padding="10">
+
+                                <Entry x:Name="SintomasEntry" Placeholder="Indique los sintomas generales:" />
+                                <Entry x:Name="DiagnosticoAnteriorEntry" Placeholder="Indique los diagnosticos anteriores:"/>
+
+                            </VerticalStackLayout>
+
+
+                        </Frame>
+
+                    </toolkit:Expander>
+                    <toolkit:Expander x:Name="ExpanderExploracionFisica">
+                        <toolkit:Expander.Header>
+                            <Frame>
+                                <Label Text="Exploracion Fisica" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center" />
+
+                            </Frame>
+                        </toolkit:Expander.Header>
+                        <Frame BackgroundColor="#f1f9fa" BorderColor="Grey" CornerRadius="10" Padding="15" HorizontalOptions="FillAndExpand" Margin="10,10,10,5">
+
+                            <VerticalStackLayout Spacing="5" Padding="10">
+
+                                <Entry x:Name="SignosVitalesEntry" Placeholder="Indique los signos vitales:"/>
+                                <Entry x:Name="DiagnosticoEntry" Placeholder="Indique el Diagnostico:"/>
+                                <Entry x:Name="PronosticoEntry" Placeholder="Indique el pronostico:"/>
+                                <Entry x:Name="TratamientoEntry"  Placeholder="Indique el tratamiento:"/>
+
+                            </VerticalStackLayout>
+
+
+                        </Frame>
+
+                    </toolkit:Expander>
+                    <toolkit:Expander x:Name="ExpanderSubirHistoriaClinica">
+                        <toolkit:Expander.Header>
+                            <Frame>
+                                <Label Text="Subir PDF de Historia Medica" HorizontalOptions="Center"  
+                        FontSize="15" FontAttributes="Bold" />
+                            </Frame>
+
+
+                        </toolkit:Expander.Header>
+                        <VerticalStackLayout Spacing="5" Padding="10">
+                            <Image Source="HistoriaClinica.png" x:Name="hcimagen" WidthRequest="300"  HeightRequest="130"/>
+
+                            <!-- Section for uploading clinic history -->
+                            <Frame BackgroundColor="#f1f9fa" CornerRadius="10" Padding="2" HorizontalOptions="FillAndExpand" Margin="50,5,50,5">
+                                <VerticalStackLayout Spacing="5">
+                                    <Label Text="Subir Historia Clinica" HorizontalOptions="Center" />
+                                    <!--<Picker />-->
+                                    <Button Text="Subir" 
+                                             BackgroundColor="#1c88a4"
+                                             HorizontalOptions="FillAndExpand"
+                                               x:Name="SubirHistoria"
+                                               Clicked="SubirHistoria_Clicked" 
+                                             ImageSource="HistoriaClinica.png" WidthRequest="100"  HeightRequest="50"/>
+                                </VerticalStackLayout>
+                            </Frame>
+
+
+                        </VerticalStackLayout>
+                    </toolkit:Expander>
+
+                    <Button Text="Guardar Historia Clinica"
+                            TextColor="White"
+                            BackgroundColor="#4998d6"
+                            CornerRadius="20"
+                            x:Name="BtnGuardarHistoria"
+                            Clicked="BtnGuardarHistoria_Clicked"
+                    />
+
+                    <Button Text="Regresar" 
+                             BackgroundColor="#b82138" 
+                              TextColor="White"
+                              CornerRadius="20"
+                             Margin="0,10,0,0"
+                             x:Name="Salir"
+                             Clicked="Salir_Clicked"/>
+                </VerticalStackLayout>
+            </ScrollView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

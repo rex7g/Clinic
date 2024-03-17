@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.Login.RecordarContraseñaPage"
+             Title="RecordarContraseñaPage">
+    <VerticalStackLayout
+      Spacing="10"
+      Padding="30"
+      BackgroundColor="#0061b1"
+      HorizontalOptions="FillAndExpand"
+      VerticalOptions="FillAndExpand">
+
+        <Frame
+          BackgroundColor="White"
+          CornerRadius="50"
+          Padding="20"
+          HasShadow="True">
+
+            <VerticalStackLayout Spacing="10">
+                <Image
+                   Margin="0,30"
+                   Aspect="AspectFit"
+                   HeightRequest="100"
+                   WidthRequest="80"
+                   Source="logoClinica.png" />
+
+                <Label
+                  FontAttributes="Bold"
+                  FontSize="22"
+                  HorizontalOptions="CenterAndExpand"
+                  Text="Restablecer contraseña"
+                  TextColor="#0061b1" />
+
+                <Entry
+                  Placeholder="Ingresa tu email"
+                  x:Name="emailEntry"    
+                  Text="{Binding UserName}" />
+                <Button
+                 BackgroundColor="#0061b1"
+                 CornerRadius="20"
+                 Text="Enviar token"
+                 TextColor="White"
+                 x:Name="EnviarEmail"
+                 Clicked="EnviarEmail_Clicked"
+               />
+
+                <Entry x:Name="TokenEntry" Placeholder="Ingresa tu token" IsVisible="False" IsPassword="True"/>
+                <Entry x:Name="NewPasswordEntry" Placeholder="Nueva contraseña" IsVisible="False" IsPassword="True"/>
+
+                <Button
+                   BackgroundColor="#0061b1"
+                   CornerRadius="20"
+                   Text="Restablecer"
+                   TextColor="White"
+                   IsVisible="False"
+                   x:Name="RestablecerContraseña"
+                   Clicked="Regresar_Clicked"/>
+
+                <Button
+                   BackgroundColor="#0061b1"
+                   CornerRadius="20"
+                   Text="Regresar"
+                   TextColor="White"
+                   x:Name="Regresar"
+                   Clicked="Regresar_Clicked"
+                  />
+
+
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>

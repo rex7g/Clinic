@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.CitasMedicasPages.AgendarCitaPage"
+             Title="AgendarCitaPage">
+    <VerticalStackLayout Spacing="5" Padding="10" HorizontalOptions="Center" VerticalOptions="Start">
+        <Label
+            Grid.Row="0"
+            FontAttributes="Bold"
+            FontSize="20"
+            HorizontalOptions="CenterAndExpand"
+            Text="Agendar Citas Medicas"
+            TextColor="#0061b1" />
+        <Label Text="Indique el nombre del paciente"/>
+        <Entry
+            Margin="0,20,0,0"
+            HorizontalOptions="FillAndExpand"
+            Placeholder="Nombre del paciente"
+            x:Name="paciente"
+            VerticalOptions="FillAndExpand" />
+        <Picker
+            Grid.Row="2"
+            VerticalOptions="FillAndExpand"
+            Title="Seleccione un Doctor"
+            x:Name="DoctorPicker"
+            ItemsSource="{Binding ListaDoctores}"
+
+        />
+        <Label Text="Escriba el motivo de la cita medica"/>
+
+        <Entry
+             Grid.Row="4"
+             HorizontalOptions="FillAndExpand"
+             Placeholder="Motivo"
+             x:Name="comentario"
+             VerticalOptions="FillAndExpand" />
+        <Label Grid.Row="5" Text="Elija la fecha y hora de la cita medica"/>
+        <DatePicker
+             Grid.Row="6" x:Name="FechaCita" />
+        <TimePicker Grid.Row="7"
+                    x:Name="HoraCita"
+                    TextColor="#0061b1"
+                    BackgroundColor="BlanchedAlmond"
+                    FontAttributes="Bold"
+                    Format="hh:mm tt"
+                  
+                    />
+        <Button
+               Grid.Row="8"
+               BackgroundColor="#0061b1"
+               CornerRadius="20"
+                x:Name="Agendar"
+                Clicked="Agendar_Clicked"
+                TextColor="White"
+                Text="Agendar Cita" />
+        <Button
+             Grid.Row="9"
+            BackgroundColor="#b82138"
+            CornerRadius="20"
+            x:Name="Salir"
+            Clicked="Salir_Clicked"
+            TextColor="White"
+            Text="Salir" />
+
+    </VerticalStackLayout>
+</ContentPage>

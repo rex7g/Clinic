@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.Ajustes.CuentaPage"
+             Title="CuentaPage">
+    <VerticalStackLayout Spacing="5" Padding="10" HorizontalOptions="Center" VerticalOptions="Start">
+
+        <!-- Imagen del perfil del usuario -->
+        <Frame HeightRequest="100" WidthRequest="100"
+              CornerRadius="50" 
+              HorizontalOptions="Center"
+              Padding="10"
+              VerticalOptions="Center">
+            <ImageButton Source="generico.png" Aspect="AspectFit"  x:Name="UserFoto"
+            CornerRadius="100" 
+            Clicked="UserFoto_Clicked"
+                       
+                        
+            
+           />
+        </Frame>
+
+        <!-- Nombre del usuario -->
+        <Label Text="Cuenta de usuario" 
+              FontAttributes="Bold" 
+              FontSize="Medium" 
+              HorizontalOptions="Center"/>
+        <Entry
+           Margin="0,20,0,0"
+            HorizontalOptions="FillAndExpand"
+           Placeholder="Nombre de usuario"
+           x:Name="usuarioEnrty"
+           VerticalOptions="FillAndExpand" />
+
+        <HorizontalStackLayout Spacing="20">
+            <Label Text="Notificaciones"  VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="100"/>
+            <Switch IsToggled="True" x:Name="Notificacion" VerticalOptions="Center" HorizontalOptions="Center" />
+        </HorizontalStackLayout>
+        <Entry
+           Margin="0,20,0,0"
+                HorizontalOptions="FillAndExpand"
+                 Placeholder="Email"
+           x:Name="EmailEntry"
+                   VerticalOptions="FillAndExpand" />
+        <Entry
+                Margin="0,20,0,0"
+                HorizontalOptions="FillAndExpand"
+            Placeholder="Telefono"
+          
+           x:Name="TelefonoEntry"
+           
+               VerticalOptions="FillAndExpand" />
+        <Entry
+               Margin="0,20,0,0"
+               HorizontalOptions="FillAndExpand"
+               Placeholder="contraseña"
+              IsPassword="True"
+           x:Name="PasswordEntry"
+               VerticalOptions="FillAndExpand" />
+
+        <!-- Botones -->
+        <VerticalStackLayout Spacing="10">
+
+            <Button Text="Regresar" HorizontalOptions="FillAndExpand" BackgroundColor="#4b86b4" x:Name="Regresar" Clicked="Regresar_Clicked"/>
+
+            <Button Text="Actualizar Información" x:Name="ActualizarDatosCuenta" Clicked="ActualizarDatosCuenta_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#ffa202"/>
+            <Button  Text="Eliminar Cuenta" x:Name="EliminarDatosCuenta" Clicked="EliminarDatosCuenta_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#b82138"/>
+
+
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

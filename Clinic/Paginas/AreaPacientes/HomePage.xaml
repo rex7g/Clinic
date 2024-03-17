@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.HomePage"
+             Title="HomePage">
+    <ScrollView>
+        <Grid Padding="25,50,25,80" ColumnSpacing="30" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Margin="0,20,-150,0"
+                Aspect="AspectFit"
+                 HeightRequest="140"
+                Source="logoclinica.png"
+                 WidthRequest="100"/>
+            <!--Header-->
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="CenterAndExpand"
+                Text="Bienvenido"
+                TextColor="#0061b1" />
+
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                x:Name="BtnCitas"
+                Clicked="BtnCitas_Clicked"
+                Text="Citas Medicas"
+                BackgroundColor="#4998d6"
+                HeightRequest="100"
+                WidthRequest="130"
+                />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="Ver Cita Medica"
+                BackgroundColor="#6d89de"
+                x:Name="ListaCitas"
+                Clicked="ListaCitas_Clicked"
+                HeightRequest="100"
+                WidthRequest="130"
+                />
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                x:Name="BtnDoctor"
+                Clicked="BtnDoctor_Clicked"
+                Text="Doctores"
+                HeightRequest="100"
+                WidthRequest="130"
+                BackgroundColor="#6d89de"
+                />
+            <Button
+               Grid.Row="2"
+               Grid.Column="1"
+               x:Name="BtnAjustes"
+               Clicked="BtnAjustes_Clicked"
+               Text="Ajustes"
+               HeightRequest="100"
+               WidthRequest="130"
+               BackgroundColor="#1c89a4"
+                />
+            <Button
+                 Grid.Row="3"
+                 Grid.Column="0"
+                 Text="Historia Clinica"
+                x:Name="BtnHistoria"
+                Clicked="BtnHistoria_Clicked"
+                HeightRequest="100"
+                WidthRequest="130"
+                BackgroundColor="#1c89a4"
+             />
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                x:Name="BtnSalir"
+                Clicked="BtnSalir_Clicked"
+                Text="Salir"
+                HeightRequest="100"
+                WidthRequest="130"
+                BackgroundColor="#b82138"
+            />
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

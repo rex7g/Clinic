@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.Ajustes.AjustesPage"
+             Title="AjustesPage">
+    <ScrollView>
+        <StackLayout Spacing="25" Padding="25">
+            <!-- Logo de la aplicación -->
+
+            <Image Source="logoclinica.png" HorizontalOptions="Center" WidthRequest="100" HeightRequest="100" Margin="0,0,0,5"/>
+
+            <!-- Contenedor para los elementos de configuración -->
+            <StackLayout Spacing="15">
+                <!-- Botón de configuración con ícono: ACCOUNT -->
+                <Button BackgroundColor="#0061b1" CornerRadius="20" Padding="10"
+                    
+                     Text="Cuenta" TextColor="White" FontAttributes="Bold" 
+                     ImageSource="icon_account.png" x:Name="Cuenta" Clicked="Cuenta_Clicked"
+                     HorizontalOptions="FillAndExpand">
+
+                </Button>
+                <!-- Botón de configuración: PRIVACY AND SECURITY -->
+                <Button BackgroundColor="#0061b1" CornerRadius="20" Padding="12"
+                     Text="Privacidad y Seguridad" TextColor="White" FontAttributes="Bold" x:Name="Privacidad"
+                     Clicked="Privacidad_Clicked"
+                     HorizontalOptions="FillAndExpand"/>
+
+                <!-- Botón de configuración: HELP AND SUPPORT -->
+                <Button BackgroundColor="#0061b1" CornerRadius="20" Padding="12"
+                     Text="Ayuda" TextColor="White" FontAttributes="Bold" x:Name="Ayuda" Clicked="Ayuda_Clicked"
+                     HorizontalOptions="FillAndExpand"/>
+
+                <!-- Botón de configuración: ABOUT -->
+                <Button BackgroundColor="#0061b1" CornerRadius="20" Padding="12"
+                     Text="Acerca de" TextColor="White" FontAttributes="Bold" x:Name="About"
+                     Clicked="About_Clicked"
+                     HorizontalOptions="FillAndExpand"/>
+
+                <!-- Botón de configuración: LOG OUT -->
+                <Button BackgroundColor="#0061b1" CornerRadius="20" Padding="12"
+                     Text="Regresar" TextColor="White" FontAttributes="Bold"
+                     HorizontalOptions="FillAndExpand"
+                     x:Name="Salir"
+                     Clicked="Salir_Clicked"
+                     
+                     />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

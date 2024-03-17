@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.Ajustes.PoliticasPrivacidadPage"
+             Title="PoliticasPrivacidadPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="5">
+            <Label Text="Política de Privacidad y Seguridad"
+                 FontSize="16"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Center" />
+
+            <Label Text="Aplicación de Citas Médicas de Clínica Ramírez y Domínguez"
+                 FontSize="16"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Center" />
+
+            <Label Text="Fecha de Entrada en Vigencia: 31 de Enero de 2024"
+                 FontSize="16"
+                 FontAttributes="None"
+                 HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="2" Color="#0061b1" Margin="10" />
+
+            <!-- Secciones de la política -->
+            <Label Text="Introducción"
+                 FontSize="18"
+                 FontAttributes="Bold" />
+            <Label Text="La Aplicación de Citas Médicas de Clínica Ramírez y Domínguez 
+                 se compromete a proteger la privacidad y seguridad de la información
+                 personal de nuestros pacientes y usuarios. Esta política explica cómo 
+                 manejamos y protegemos su información personal al utilizar nuestros 
+                 servicios médicos digitales."
+                 FontSize="14"
+                 FontAutoScalingEnabled="True"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="CenterAndExpand"
+
+                 
+                 />
+
+            <!-- Se continúa con el resto de las secciones -->
+            <!-- Ejemplo de otra sección -->
+            <Label Text="Información que Recopilamos"
+                 FontSize="18"
+                 FontAttributes="Bold" />
+            <Label Text="Información Personal: Cuando utilizas nuestra aplicación, podemos recopilar cierta información personal identificable, como tu nombre, dirección de correo electrónico, número de teléfono,
+                 fecha de nacimiento y cualquier otra información que proporciones voluntariamente al crear una cuenta o programar una cita.Información de Salud: Para programar citas médicas, es posible que
+                 necesitemos recopilar información sobre tu historial médico, síntomas actuales y otros detalles relevantes para la atención médica. Esta información se utilizará exclusivamente para proporcionar
+                 servicios médicos y se tratará con la debida confidencialidad.Información de Uso: Podemos recopilar información sobre cómo utilizas la aplicación, como las citas programadas, la interacción con
+                 el personal médico, las búsquedas de médicos y cualquier comentario o revisión que proporciones."
+                 FontSize="14" 
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="CenterAndExpand"
+                 
+                 />
+            <Label Text="Uso de la informacion"
+                 FontSize="18"
+                 FontAttributes="Bold" />
+            <Label Text="Utilizamos la información recopilada para proporcionar y mejorar nuestros servicios, gestionar citas médicas, comunicarnos contigo, personalizar tu experiencia en la aplicación y cumplir con las leyes y regulaciones aplicables."
+                   FontSize="14" 
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"            
+                   />
+            <Label Text="Compartir Información"
+                 FontSize="18"
+                 FontAttributes="Bold" />
+            <Label Text="No compartiremos tu información personal con terceros, excepto en las siguientes circunstancias:
+                      Con proveedores de servicios que nos ayudan a proporcionar y mejorar nuestros servicios.
+                      Con profesionales médicos de la clínica Ramirez y Domínguez para programar citas y proporcionar atención médica.
+                      Cuando sea necesario para cumplir con la ley, proteger nuestros derechos legales o responder a procesos legales.
+                      "
+                 FontSize="14" 
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="CenterAndExpand"            
+                 />
+            <Label Text="Seguridad de la Información"
+                   FontSize="18"
+                   FontAttributes="Bold" />
+
+            <Label Text="Tomamos medidas para proteger la información personal que recopilamos, incluidas medidas de seguridad físicas,
+                 técnicas y administrativas para proteger contra el acceso no autorizado, la divulgación, alteración o destrucción de la información."
+          FontSize="14" 
+          HorizontalOptions="FillAndExpand"
+          VerticalOptions="CenterAndExpand"            
+          />
+            <Label Text="Tus Derechos"
+        FontSize="18"
+        FontAttributes="Bold" />
+
+            <Label Text="Tienes derechos sobre tu información personal, incluido el derecho a acceder, corregir o eliminar tus datos personales. 
+                 También puedes optar por no recibir comunicaciones de marketing de nuestra parte en cualquier momento."
+          FontSize="14" 
+          HorizontalOptions="FillAndExpand"
+          VerticalOptions="CenterAndExpand"            
+          />
+            <Label Text="Menores de Edad"
+          FontSize="18"
+          FontAttributes="Bold" />
+
+            <Label Text="Nuestra aplicación no está dirigida a menores de 18 años y no recopilamos de manera consciente información personal de menores sin el consentimiento verificable de sus padres o tutores legales. Si eres padre o tutor y 
+                 crees que tu hijo nos ha proporcionado información personal sin tu consentimiento, contáctanos de inmediato para que podamos eliminarla y tomar las medidas necesarias. Reconocemos la importancia de proteger la privacidad de
+                 los niños en línea y nos comprometemos a cumplir con la Ley de Protección de la Privacidad en Línea de los Niños (COPPA, por sus siglas en inglés) y otras leyes de privacidad aplicables que protegen los derechos y la privacidad
+                 de los niños en línea."
+            FontSize="14" 
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand"            
+            />
+            <Label Text="Cambios en esta Política de Privacidad"
+                  FontSize="18"
+                  FontAttributes="Bold" />
+
+            <Label Text="Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestras prácticas de recopilación y uso de información. 
+                 Te notificaremos cualquier cambio significativo publicando la nueva política de privacidad en esta página.."
+           FontSize="14" 
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="CenterAndExpand"            
+           />
+
+            <Label Text="Consentimiento"
+                 FontSize="18"
+                 FontAttributes="Bold" />
+            <Label Text="Al utilizar nuestra aplicación, aceptas los términos de esta Política de Privacidad.Fecha de vigencia: 12/03/2024."
+                  HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                  FontSize="16" />
+            <Label Text="Contacto"
+                  FontSize="18"
+                  FontAttributes="Bold" />
+            <Label Text="Si tiene preguntas sobre esta política o cómo manejamos su información, no dude en contactarnos:"
+                 HorizontalOptions="FillAndExpand"
+                  VerticalOptions="CenterAndExpand"
+                 FontSize="16" />
+            <Label Text="Clínica Ramírez y Domínguez"
+                 FontSize="16"
+                 FontAttributes="Bold" />
+            <Label Text="Teléfono: +1 (849) 816-8953"
+                 TextColor="#0061b1"
+                 FontSize="14" />
+            <Button x:Name="Regresar" Clicked="Regresar_Clicked" Text="Regresar" BackgroundColor="#0061b1"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
