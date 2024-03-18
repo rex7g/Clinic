@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicApp", "ClinicApp\ClinicApp.csproj", "{52D77579-D7D9-4723-8172-C52BE6C505AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API CLINICA", "API CLINICA\API CLINICA.csproj", "{9B75DADD-A9AF-4316-A6EE-E4A4085CA2FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API CLINICA", "API CLINICA\API CLINICA.csproj", "{9B75DADD-A9AF-4316-A6EE-E4A4085CA2FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinic", "Clinic\Clinic.csproj", "{0591BFEE-C37C-4A9F-8971-C9AADD81DDEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{52D77579-D7D9-4723-8172-C52BE6C505AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52D77579-D7D9-4723-8172-C52BE6C505AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52D77579-D7D9-4723-8172-C52BE6C505AC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{52D77579-D7D9-4723-8172-C52BE6C505AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52D77579-D7D9-4723-8172-C52BE6C505AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52D77579-D7D9-4723-8172-C52BE6C505AC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{9B75DADD-A9AF-4316-A6EE-E4A4085CA2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9B75DADD-A9AF-4316-A6EE-E4A4085CA2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B75DADD-A9AF-4316-A6EE-E4A4085CA2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B75DADD-A9AF-4316-A6EE-E4A4085CA2FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0591BFEE-C37C-4A9F-8971-C9AADD81DDEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0591BFEE-C37C-4A9F-8971-C9AADD81DDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0591BFEE-C37C-4A9F-8971-C9AADD81DDEE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0591BFEE-C37C-4A9F-8971-C9AADD81DDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0591BFEE-C37C-4A9F-8971-C9AADD81DDEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0591BFEE-C37C-4A9F-8971-C9AADD81DDEE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

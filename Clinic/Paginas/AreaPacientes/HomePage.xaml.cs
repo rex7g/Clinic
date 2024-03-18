@@ -6,8 +6,7 @@ namespace Clinic.Paginas.AreaPacientes;
 
 public partial class HomePage : ContentPage
 {
-    public IApiService _ApiService { get; set; }
-
+    public readonly IApiService _ApiService;
 	public HomePage(IApiService service)
 	{
 		InitializeComponent();
@@ -34,13 +33,13 @@ public partial class HomePage : ContentPage
         await Navigation.PushModalAsync(new AjustesPage());
     }
 
-    private void BtnHistoria_Clicked(object sender, EventArgs e)
+    private async void BtnHistoria_Clicked(object sender, EventArgs e)
     {
-
+        //await Navigation.PushModalAsync(new HistoriaClinicaPage())
     }
 
-    private void BtnSalir_Clicked(object sender, EventArgs e)
+    private async void BtnSalir_Clicked(object sender, EventArgs e)
     {
-
+        await Navigation.PopModalAsync();
     }
 }

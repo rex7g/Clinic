@@ -11,7 +11,9 @@ public partial class AgendarCitaPage : ContentPage
     public AgendarCitaPage(IApiService service)
 	{
 		InitializeComponent();
-        apiService= service;
+        apiService = service;
+        CargarDoctores();
+
 
     }
 
@@ -84,9 +86,38 @@ public partial class AgendarCitaPage : ContentPage
             Console.WriteLine(ex.Message);
             // Manejo de excepciones aqu� si es necesario
         }
+      
     }
-    private void Salir_Clicked(object sender, EventArgs e)
+    private async void CargarDoctores()
     {
+        // Aqu� deber�as cargar la lista de doctores desde tu servicio o fuente de datos
+        // Por ejemplo:
+        var doctores = await apiService.GetDoctores();
 
+        // Obtener lista de especialidades sin duplicados
+        var especialidades = doctores.Select(d => d.Especialidad).Distinct().ToList();
+        // Actualizar el picker de especialidades
+        MainThread.BeginInvokeOnMainThread(() => {
+            EspecialidadPicker.ItemsSource = especialidades;
+        });
+    }
+    private async void Salir_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopModalAsync();
+    }
+
+    private as void EspecialidadPicker_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (EspecialidadPicker.SelectedIndex == -1) return;
+
+        var especialidadSeleccionada = EspecialidadPicker.SelectedItem.ToString();
+        var doctores = await apiService.GetDoctores();
+        var doctoresDeEspecialidad = doctores.Where(d => d.Especialidad == especialidadSeleccionada).ToList();
+        var nombresDeDoctores = doctoresDeEspecialidad.Select(d => d.Nombre).ToList();
+
+        // Actualizar el picker de doctores con los doctores de la especialidad seleccionada
+        MainThread.BeginInvokeOnMainThread(() => {
+            DoctorPicker.ItemsSource = nombresDeDoctores;
+        });
     }
 }

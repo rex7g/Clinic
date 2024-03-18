@@ -42,7 +42,7 @@ namespace Clinic.Servicios
             try
             {
 
-                Uri uri = new(string.Format($"{Constantes.API_BASE_ADDRESS}api/usuarios/BuscarUsuarioporNombre?nombre={usuario}"));
+                Uri uri = new(string.Format($"{Constantes.API_BASE_ADDRESS}/api/usuarios/BuscarUsuarioporNombre?nombre={usuario}"));
                 var response = await client.GetAsync(uri);
                 var prueba = response.Content.ReadAsStringAsync();
 
@@ -191,7 +191,7 @@ namespace Clinic.Servicios
 
             try
             {
-                Uri uri = new(string.Format($"{Constantes.API_BASE_ADDRESS}api/CitaMedica/ListaCitasMedicas"));
+                Uri uri = new(string.Format($"{Constantes.API_BASE_ADDRESS}/api/CitaMedica/ListaCitasMedicas"));
                 var response = await client.GetAsync(uri);
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -256,7 +256,7 @@ namespace Clinic.Servicios
             {
                 string citaJson = JsonConvert.SerializeObject(nuevacita);
                 HttpContent content = new StringContent(citaJson, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PostAsync($"{Constantes.API_BASE_ADDRESS}api/CitaMedica/CrearCita", content);
+                HttpResponseMessage response = await client.PostAsync($"{Constantes.API_BASE_ADDRESS}/api/CitaMedica/CrearCita", content);
                 if (response.IsSuccessStatusCode)
                 {
                     // Lee la respuesta JSON del servidor
@@ -382,7 +382,7 @@ namespace Clinic.Servicios
             try
             {
 
-                Uri uri = new(string.Format($"{Constantes.API_BASE_ADDRESS}api/Doctores/ListaDoctores"));
+                Uri uri = new(string.Format($"{Constantes.API_BASE_ADDRESS}/api/Doctores/ListaDoctores"));
                 var response = await client.GetAsync(uri);
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -638,6 +638,8 @@ namespace Clinic.Servicios
             // Devolver el resultado del archivo
             return new FileResult(filePath);
         }
+
+      
 
 
 

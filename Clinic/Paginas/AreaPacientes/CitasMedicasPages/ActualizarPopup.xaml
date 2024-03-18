@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.CitasMedicasPages.ActualizarPopup"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             >
+    <VerticalStackLayout 
+     BackgroundColor="White" HeightRequest="500" WidthRequest="300" 
+     Padding="20" >
+        <VerticalStackLayout Spacing="10" Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <HorizontalStackLayout HorizontalOptions="Start" Spacing="5">
+                <Button Text="X" CornerRadius="20" BackgroundColor="#0061b1" x:Name="CerrarPopup" Clicked="CerrarPopup_Clicked" Margin="10"/>
+                <Label 
+                     Text="Editar cita medica"
+                     Margin="0,20,0,0"/>
+
+            </HorizontalStackLayout>
+
+
+
+            <Entry Placeholder="Nombre Paciente" x:Name="NombrePacienteEntry" Text="{Binding NombrePacientePopup}" HorizontalOptions="FillAndExpand"             Margin="0,20,0,0"
+ />
+            <Entry Placeholder="Doctor" x:Name="DoctorEntry" Text="{Binding DoctorPopup}" HorizontalOptions="FillAndExpand"/>
+            <Entry Placeholder="Motivo de la cita" x:Name="MotivoEntry"  Text="{Binding MotivoPopup}" HorizontalOptions="FillAndExpand"/>
+            <Label Text="Elija la hora de la cita"/>
+            <TimePicker x:Name="HoraCita"  />
+
+            <Label Text="Fecha de la cita"/>
+
+            <DatePicker  x:Name="FechaCitaEntry"  Date="{Binding FechaCitaPopup}" />
+
+
+            <HorizontalStackLayout Spacing="10">
+                <Button
+                     Text="Cancelar cita"
+                     x:Name="CancelarCita"
+                    Clicked="CancelarCita_Clicked"
+                        BackgroundColor="#b82138" >
+
+                </Button>
+                <Button
+                     Text="Actualizar Cita"
+                    x:Name="ActualizarCita"
+                         Clicked="ActualizarCita_Clicked"    
+                    BackgroundColor="#0061b1"
+                    />
+
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</toolkit:Popup>

@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Maui;
+﻿using Clinic.Paginas.Login;
+using Clinic.Servicios;
+using CommunityToolkit.Maui;
 using Microcharts.Maui;
 using Microsoft.Extensions.Logging;
 
@@ -22,6 +24,8 @@ namespace Clinic
 
 #if DEBUG
     		builder.Logging.AddDebug();
+            builder.Services.AddTransient<IApiService,ApiService>();
+            builder.Services.AddSingleton<LoginPage>();
 #endif
 
             return builder.Build();
