@@ -82,7 +82,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Paginas\AreaDoctores\" />
+	  <Folder Include="Paginas\AreaDoctores\CitasAgendadas\" />
+	  <Folder Include="Paginas\AreaDoctores\ContactoDoctores\" />
 	  <Folder Include="Paginas\AreaEmpleados\" />
 	</ItemGroup>
 
@@ -97,6 +98,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Paginas\AreaDoctores\LoginDoctoresPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Paginas\AreaPacientes\Ajustes\AcercaDePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -107,6 +111,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Paginas\AreaPacientes\Ajustes\PoliticasPrivacidadPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Paginas\AreaPacientes\CitasMedicasPages\ActualizarPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Paginas\AreaPacientes\CitasMedicasPages\AgendarCitaPage.xaml">
@@ -122,6 +129,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Paginas\Login\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Paginas\Login\OpcionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Paginas\Login\RecordarContraseñaPage.xaml">

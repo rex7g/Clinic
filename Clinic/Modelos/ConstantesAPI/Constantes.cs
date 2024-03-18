@@ -12,7 +12,7 @@ namespace Clinic.Modelos.ConstantesAPI
         //public static string API_BASE_ADDRESS = "https://localhost:7151/";
         //public static string API_BASE_ADDRESS = "https://127.0.0.1:7151/";
         //Produccion
-        public static string API_BASE_ADDRESS = "http://ApiClinica.somee.com";
+        public static string API_BASE_ADDRESS = "https://ApiClinica.somee.com";
 
         //FirebaseAPI CONSTANTES
         public static string authDomain = "clinic-f3d50.firebaseapp.com";

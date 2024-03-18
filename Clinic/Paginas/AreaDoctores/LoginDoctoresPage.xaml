@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaDoctores.LoginDoctoresPage"
+             Title="LoginDoctoresPage">
+    <ContentPage.Content>
+        <VerticalStackLayout>
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="50"
+                Padding="20"
+                HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Image
+                     Margin="0,30"
+                     Aspect="AspectFit"
+                     HeightRequest="100"
+                     WidthRequest="80"
+                     Source="logoClinica.png" />
+
+                    <Label
+                     FontAttributes="Bold"
+                     FontSize="24"
+                     HorizontalOptions="CenterAndExpand"
+                     Text="Bienvenido"
+                     TextColor="#0061b1" />
+
+                    <Label
+                      HorizontalOptions="CenterAndExpand"
+                      Text="Clinica Ramirez y Dominguez"
+                      TextColor="#0061b1" />
+                    <Entry
+                    Placeholder="Usuario"
+                    x:Name="user"    
+                    Text="{Binding UserName}" />
+
+                    <Entry
+                     IsPassword="True"
+                     Placeholder="Contraseña"
+                     x:Name="password"    
+                     Text="{Binding UserPassword}" />
+
+                    <Button
+                     BackgroundColor="#0061b1"
+                     Command="{Binding LoginBtn}"
+                     CornerRadius="20"
+                     Text="Inicio"
+                     x:Name="BtnInicioMedico"
+                     TextColor="White"
+                     Clicked="BtnInicioMedico_Clicked" />
+
+                    <Button  Text="Olvido su contraseña?Restablecer"
+                     FontAttributes="Bold"
+                     TextColor="#0061b1"
+                     BackgroundColor="Transparent"
+                     x:Name="ResetPasswordMedico"
+                     Clicked="ResetPasswordMedico_Clicked"
+                     BorderColor="Transparent"/>
+
+                    <Button  Text="No tiene cuenta? Registrese aqui"
+                         TextColor="#0061b1"
+                         BackgroundColor="Transparent"
+                         x:Name="RegistroMedico"
+                         Clicked="RegistroMedico_Clicked"
+                         BorderColor="Transparent"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

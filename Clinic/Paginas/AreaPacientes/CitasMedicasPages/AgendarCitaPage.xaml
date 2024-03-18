@@ -3,64 +3,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Clinic.Paginas.AreaPacientes.CitasMedicasPages.AgendarCitaPage"
              Title="AgendarCitaPage">
-    <VerticalStackLayout Spacing="5" Padding="10" HorizontalOptions="Center" VerticalOptions="Start">
-        <Label
-            Grid.Row="0"
-            FontAttributes="Bold"
-            FontSize="20"
-            HorizontalOptions="CenterAndExpand"
-            Text="Agendar Citas Medicas"
-            TextColor="#0061b1" />
-        <Label Text="Indique el nombre del paciente"/>
-        <Entry
-            Margin="0,20,0,0"
-            HorizontalOptions="FillAndExpand"
-            Placeholder="Nombre del paciente"
-            x:Name="paciente"
-            VerticalOptions="FillAndExpand" />
-        <Picker
-            Grid.Row="2"
-            VerticalOptions="FillAndExpand"
-            Title="Seleccione un Doctor"
-            x:Name="DoctorPicker"
-            ItemsSource="{Binding ListaDoctores}"
-
-        />
-        <Label Text="Escriba el motivo de la cita medica"/>
-
-        <Entry
+    <ContentPage.Content>
+        <VerticalStackLayout Spacing="5" Padding="20" HorizontalOptions="Center" VerticalOptions="Start" BackgroundColor="#008bdc">
+            <Frame BackgroundColor="White" CornerRadius="40" Padding="30" HasShadow="True">
+                <VerticalStackLayout>
+                    <Label
+              Grid.Row="0"
+              FontAttributes="Bold"
+              FontSize="20"
+              HorizontalOptions="CenterAndExpand"
+              Text="Agendar Citas Medicas"
+              TextColor="#0061b1" />
+                    <Label Text="Indique el nombre del paciente" VerticalOptions="Center"/>
+                    <Entry
+              Margin="0,20,0,0"
+              HorizontalOptions="FillAndExpand"
+              Placeholder="Nombre del paciente"
+              x:Name="paciente"
+              VerticalOptions="FillAndExpand" />
+                    <HorizontalStackLayout>
+                        <Picker Grid.Row="2" HeightRequest="60" WidthRequest="200" VerticalOptions="FillAndExpand" Title="Especialidad" x:Name="EspecialidadPicker" ItemsSource="{Binding ListaEspecialidad}" SelectedIndexChanged="EspecialidadPicker_SelectedIndexChanged" />
+                        <Picker Grid.Row="2" HeightRequest="60" WidthRequest="200" VerticalOptions="FillAndExpand" Title=" Doctor"  x:Name="DoctorPicker"  ItemsSource="{Binding ListaDoctores}"/>
+                    </HorizontalStackLayout>
+                    <Label Text="Escriba el motivo de la cita medica"/>
+                    <Entry
              Grid.Row="4"
              HorizontalOptions="FillAndExpand"
              Placeholder="Motivo"
              x:Name="comentario"
              VerticalOptions="FillAndExpand" />
-        <Label Grid.Row="5" Text="Elija la fecha y hora de la cita medica"/>
-        <DatePicker
-             Grid.Row="6" x:Name="FechaCita" />
-        <TimePicker Grid.Row="7"
-                    x:Name="HoraCita"
-                    TextColor="#0061b1"
-                    BackgroundColor="BlanchedAlmond"
-                    FontAttributes="Bold"
-                    Format="hh:mm tt"
-                  
-                    />
-        <Button
-               Grid.Row="8"
-               BackgroundColor="#0061b1"
-               CornerRadius="20"
-                x:Name="Agendar"
-                Clicked="Agendar_Clicked"
-                TextColor="White"
-                Text="Agendar Cita" />
-        <Button
-             Grid.Row="9"
-            BackgroundColor="#b82138"
-            CornerRadius="20"
-            x:Name="Salir"
-            Clicked="Salir_Clicked"
-            TextColor="White"
-            Text="Salir" />
-
-    </VerticalStackLayout>
+                    <Label Grid.Row="5" Text="Elija la fecha y hora de la cita medica"/>
+                    <DatePicker
+                Grid.Row="6" x:Name="FechaCita" Format="dd/mm/yyyy" />
+                    <TimePicker Grid.Row="7"
+                  x:Name="HoraCita"
+                  TextColor="#0061b1"
+                  BackgroundColor="White"
+                  FontAttributes="Bold"
+                  Format="hh:mm tt"
+                
+                  />
+                    <Button
+             Grid.Row="8"
+             BackgroundColor="#0061b1"
+             CornerRadius="20"
+              x:Name="Agendar"
+              Clicked="Agendar_Clicked"
+              TextColor="White"
+              Text="Agendar Cita" />
+                    <Button
+                  Grid.Row="9"
+                 BackgroundColor="#b82138"
+                 CornerRadius="20"
+                 x:Name="Salir"
+                 Clicked="Salir_Clicked"
+                 TextColor="White"
+                 Text="Salir" />
+                </VerticalStackLayout> 
+            </Frame>
+        </VerticalStackLayout>
+    </ContentPage.Content>
 </ContentPage>

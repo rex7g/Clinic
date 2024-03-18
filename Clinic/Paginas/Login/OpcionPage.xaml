@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.Login.OpcionPage"
+             Title="OpcionPage">
+    <ContentPage.Content>
+        <VerticalStackLayout
+             Spacing="10"
+             Padding="30"
+             BackgroundColor="#0061b1"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="50"
+                Padding="40"
+                HasShadow="True">
+
+                <VerticalStackLayout Spacing="10">
+                    <Image
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    Source="logoClinica.png" />
+
+                    <Label
+                         FontAttributes="Bold"
+                         FontSize="22"
+                         HorizontalOptions="CenterAndExpand"
+                         Text="Bienvenido"
+                         TextColor="#0061b1" />
+
+                    <Label
+                         HorizontalOptions="CenterAndExpand"
+                         Text="Clinica Ramirez y Dominguez"
+                         TextColor="#0061b1" />
+
+                    <Button
+                    BackgroundColor="#0061b1"
+                    CornerRadius="20"
+                    x:Name="BtnPaciente"
+                    Text="Paciente"
+                    TextColor="White"
+                    Clicked="BtnPaciente_Clicked" />
+
+                    <Button
+                    BackgroundColor="#0061b1"
+                    x:Name="BtnMedico"
+                    CornerRadius="20"
+                    Text="Medico"
+                    TextColor="White"
+                    Clicked="BtnMedico_Clicked" />
+
+                </VerticalStackLayout>
+
+
+
+
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

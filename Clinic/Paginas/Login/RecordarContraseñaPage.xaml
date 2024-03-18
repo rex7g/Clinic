@@ -53,8 +53,8 @@
                    Text="Restablecer"
                    TextColor="White"
                    IsVisible="False"
-                   x:Name="RestablecerContraseña"
-                   Clicked="Regresar_Clicked"/>
+                   x:Name="RestablecerCrontraseña"
+                   Clicked="RestablecerCrontraseña_Clicked"/>
 
                 <Button
                    BackgroundColor="#0061b1"

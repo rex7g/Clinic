@@ -3,93 +3,100 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Clinic.Paginas.AreaPacientes.CitasMedicasPages.ListaCitasPage"
              Title="ListaCitasPage">
-    <VerticalStackLayout Spacing="10" >
 
-        <Image Margin="0,5"
-         Aspect="AspectFit"
-         HeightRequest="100"
-        Source="logoclinica.png"
-        WidthRequest="100"/>
-        <Label 
-        Text="Citas Medicas Pendientes "
-        VerticalOptions="Center"
-        FontSize="Title"
-        TextColor="#0061b1"
-        HorizontalOptions="Center" />
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Spacing="10" >
 
-        <!--<SearchBar Placeholder="Buscar por nombre o por doctor" x:Name="BuscarCita" TextChanged="BuscarCita_TextChanged" SearchButtonPressed="BuscarCita_SearchButtonPressed"/>-->
-        <SearchBar Placeholder="Buscar por nombre o por doctor" x:Name="BuscarCita" SearchButtonPressed="BuscarCita_SearchButtonPressed"/>
+                <Image Margin="0,5"
+       Aspect="AspectFit"
+       HeightRequest="100"
+      Source="logoclinica.png"
+      WidthRequest="100"/>
+                <Label 
+      Text="Citas Medicas Pendientes "
+      VerticalOptions="Center"
+      FontSize="Title"
+      TextColor="#0061b1"
+      HorizontalOptions="Center" />
 
-        <ActivityIndicator x:Name="CargandoCitas" Color="#0061b1"  IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}"  />
+                <!--<SearchBar Placeholder="Buscar por nombre o por doctor" x:Name="BuscarCita" TextChanged="BuscarCita_TextChanged" SearchButtonPressed="BuscarCita_SearchButtonPressed"/>-->
+                <SearchBar Placeholder="Buscar por nombre o por doctor" x:Name="BuscarCita" SearchButtonPressed="BuscarCita_SearchButtonPressed"/>
 
-        <ListView x:Name="citasListview" HasUnevenRows="True" 
-                  SelectedItem="{Binding CitaSelected}"
-                  ItemSelected="citasListview_ItemSelected" 
-                  IsVisible="{Binding HasCitas}">
+                <ActivityIndicator x:Name="CargandoCitas" Color="#0061b1"  IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}"  />
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10">
-                            <Label  FontSize="16">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span FontAttributes="Bold" Text="Paciente:" TextColor="Black"/>
-                                        <Span Text="{Binding Paciente}" TextColor="Black"/>
-                                    </FormattedString>
-                                </Label.FormattedText>
+                <ListView x:Name="citasListview" HasUnevenRows="True" 
+                SelectedItem="{Binding CitaSelected}"
+                ItemSelected="citasListview_ItemSelected" 
+                IsVisible="{Binding HasCitas}">
 
-                            </Label>
-                            <Label FontSize="16">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span FontAttributes="Bold" Text="Fecha de la cita" TextColor="Black" />
-                                        <Span Text="{Binding FechaCita}" />
-                                    </FormattedString>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10">
+                                    <Label  FontSize="16">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span FontAttributes="Bold" Text="Paciente:" TextColor="Black"/>
+                                                <Span Text="{Binding Paciente}" TextColor="Black"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
 
-                                </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="16">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span FontAttributes="Bold" Text="Fecha de la cita" TextColor="Black" />
+                                                <Span Text="{Binding FechaCita}" />
+                                            </FormattedString>
 
-                            </Label>
-                            <Label FontSize="16">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span FontAttributes="Bold" Text="Hora de la cita: " TextColor="Black" />
-                                        <Span Text="{Binding HoraCita}" />
-                                    </FormattedString>
+                                        </Label.FormattedText>
 
-                                </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="16">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span FontAttributes="Bold" Text="Hora de la cita: " TextColor="Black" />
+                                                <Span Text="{Binding HoraCita}" />
+                                            </FormattedString>
 
-                            </Label>
-                            <Label FontSize="16">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span FontAttributes="Bold" Text="Doctor" TextColor="Black" />
-                                        <Span Text="{Binding Doctor}" TextColor="Black"/>
-                                    </FormattedString>
+                                        </Label.FormattedText>
 
-                                </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="16">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span FontAttributes="Bold" Text="Doctor" TextColor="Black" />
+                                                <Span Text="{Binding Doctor}" TextColor="Black"/>
+                                            </FormattedString>
 
-                            </Label>
-                            <Label FontSize="16">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span FontAttributes="Bold" Text="Estado:"/>
-                                        <Span Text="{Binding Status}"/>
-                                    </FormattedString>
+                                        </Label.FormattedText>
 
-                                </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="16">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span FontAttributes="Bold" Text="Estado:"/>
+                                                <Span Text="{Binding Status}"/>
+                                            </FormattedString>
 
-                            </Label>
+                                        </Label.FormattedText>
 
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <HorizontalStackLayout  HorizontalOptions="Center">
-            <Button WidthRequest="100"  HeightRequest="50" Text="Regresar" x:Name="Salir" Clicked="Salir_Clicked"  BackgroundColor="#b82138"></Button>
-        </HorizontalStackLayout>
+                                    </Label>
 
-    </VerticalStackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <HorizontalStackLayout  HorizontalOptions="Center">
+                    <Button WidthRequest="100"  HeightRequest="50" Text="Regresar" x:Name="Salir" Clicked="Salir_Clicked"  BackgroundColor="#b82138"></Button>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+  
 
 </ContentPage>

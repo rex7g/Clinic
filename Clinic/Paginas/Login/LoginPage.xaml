@@ -7,7 +7,7 @@
       <VerticalStackLayout
       Spacing="10"
       Padding="30"
-      BackgroundColor="#0061b1"
+      BackgroundColor="#008bdc"
       HorizontalOptions="FillAndExpand"
       VerticalOptions="FillAndExpand">
 
@@ -56,7 +56,7 @@
                   TextColor="White"
                   Clicked="BtnInicio_Clicked" />
 
-                  <Button  Text="Olvido su contraseña"
+                  <Button  Text="Olvido su contraseña?Restablecer"
                            FontAttributes="Bold"
                            TextColor="#0061b1"
                            BackgroundColor="Transparent"
