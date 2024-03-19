@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.Medicos.ContactosMedicosPage"
+             Title="ContactosMedicosPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Spacing="10" Padding="10" VerticalOptions="Center">
+
+                <Label 
+           Text="Doctores"
+           VerticalOptions="Center"
+           FontSize="Title"
+           TextColor="#0061b1"
+           HorizontalOptions="Center" />
+                <Image Source="doctor.png"
+            HeightRequest="100"
+            WidthRequest="100"
+            Aspect="AspectFit" />
+
+                <SearchBar  Placeholder="Buscar Doctor" x:Name="SearchDoctor" ></SearchBar>
+                <ActivityIndicator x:Name="CargandoDoctores" Color="#4998d6"  IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}"  />
+
+                <ListView x:Name="DoctorListView" ItemsSource="{Binding listaDoctores}" 
+                    SelectedItem="{Binding SelectedDoctor}"
+                    ItemSelected="DoctorListView_ItemSelected"
+                    VerticalOptions="FillAndExpand"
+                    HasUnevenRows="True"
+                    >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal"  >
+                                    <Image Source="generico.png"
+                                   HeightRequest="80"
+                                   WidthRequest="80"
+                                   Aspect="AspectFit" />
+
+                                    <StackLayout VerticalOptions="Center"  Padding="10">
+                                        <Label  FontSize="16">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span FontAttributes="Bold" Text="Nombre:" TextColor="Black"/>
+                                                    <Span Text="{Binding Nombre}" TextColor="Black"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label  FontSize="16">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span FontAttributes="Bold" Text="Especialidad:" TextColor="Black"/>
+                                                    <Span Text="{Binding Especialidad}" TextColor="Black"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label  FontSize="16">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span FontAttributes="Bold" Text="Edad:" TextColor="Black"/>
+                                                    <Span Text="{Binding Edad}" TextColor="Black"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <!--<StackLayout Orientation="Horizontal">
+                                <Label Text="Calificación:" />
+                                -->
+                                        <!--<Rating StarCount="5"
+                                           Value="{Binding Calificacion}"
+                                           IsReadOnly="True" />-->
+                                        <!--
+                            </StackLayout>-->
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Button Text="Regresar" x:Name="Salir" Clicked="Salir_Clicked" BackgroundColor="#4998d6"/>
+
+                </HorizontalStackLayout>
+
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+    
+</ContentPage>

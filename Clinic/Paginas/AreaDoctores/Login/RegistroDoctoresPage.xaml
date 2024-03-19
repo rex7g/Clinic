@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaDoctores.Login.RegistroDoctoresPage"
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"    
+             Title="RegistroDoctoresPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout
+   Spacing="10"
+   Padding="28"
+   BackgroundColor="#0061b1"
+   HorizontalOptions="FillAndExpand"
+   VerticalOptions="FillAndExpand">
+
+                <Frame
+       BackgroundColor="White"
+       CornerRadius="50"
+       Padding="20"
+       HasShadow="True">
+
+                    <VerticalStackLayout Spacing="5">
+                        <Image
+             Margin="0,5"
+             Aspect="AspectFit"
+             HeightRequest="100"
+             WidthRequest="80"
+             Source="logoClinica.png" />
+
+                        <Label
+         FontAttributes="Bold"
+         FontSize="20"
+         HorizontalOptions="CenterAndExpand"
+         Text="Bienvenido Doctor"
+         TextColor="#0061b1" />
+                        <Label
+         HorizontalOptions="CenterAndExpand"
+         Text="Clinica Ramirez y Dominguez"
+         TextColor="#0061b1" />
+                        <Label
+        HorizontalOptions="CenterAndExpand"
+        Text="Complete los campos para realizar su registro"
+        TextColor="#0061b1" />
+
+                        <toolkit:Expander >
+                            <toolkit:Expander.Header>
+                                <Label Text="Datos personales" FontAttributes="Bold" FontSize="14" HorizontalOptions="Center" />
+
+                            </toolkit:Expander.Header>
+                            <ScrollView>
+                                <Frame BackgroundColor="White" BorderColor="Grey" CornerRadius="10" Padding="5" HorizontalOptions="FillAndExpand" Margin="10,10,10,5">
+
+                                    <VerticalStackLayout>
+
+                                        <Entry
+                                        Placeholder="Usuario"
+                                        x:Name="Usuario"    
+                                        Text="{Binding Usuario}"
+                                         IsEnabled="False"
+                                         />
+
+                                        <HorizontalStackLayout Spacing="10">
+                                            <Entry
+                                           Placeholder="Nombre"
+                                           x:Name="NombreUsuario"    
+                                           Text="{Binding Nombre}" 
+                                            />
+                                            <Entry
+                                             Placeholder="Apellido"
+                                             x:Name="ApellidoUsuario"    
+                                             Text="{Binding Apellido}" 
+                                             />
+                                        </HorizontalStackLayout>
+
+                                        <Label Text="Indique su fecha de Nacimiento"/>
+                                        <DatePicker x:Name="FechaNacimiento"/>
+
+                                        <Entry
+                                        Placeholder="Email"
+                                        x:Name="Email"    
+                                        Text="{Binding Email}" />
+                                        <Entry
+                                        Placeholder="Telefono sin guiones"
+                                        x:Name="telefono"                     
+                                        Text="{Binding telefono}" />
+                                        <Entry
+                                        IsPassword="True"
+                                        Placeholder="Contraseña"
+                                        x:Name="password"    
+                                        Text="{Binding password}" />
+
+                                        <Entry
+                                        Placeholder="Codigo o Cedula "
+                                        x:Name="CedulaoCodigo"    
+                                        Text="{Binding cedula}" />
+
+                                    
+
+                                </VerticalStackLayout>
+                                </Frame>
+                            </ScrollView>
+                        </toolkit:Expander>
+
+
+                        <toolkit:Expander>
+
+                            <toolkit:Expander.Header>
+                                <Frame>
+                                    <Label Text="Indique su Jornada Laboral" FontAttributes="Bold" FontSize="14" HorizontalOptions="Center" />
+                                </Frame>
+
+                            </toolkit:Expander.Header>
+                            <ScrollView>
+                                <Frame BackgroundColor="White" BorderColor="Grey" CornerRadius="10" Padding="15" HorizontalOptions="FillAndExpand" Margin="10,10,10,5">
+                                    <VerticalStackLayout Spacing="5" Padding="10">
+                                        <Label Text="Escoja los dias laborables"/>
+
+                                        <HorizontalStackLayout Spacing="5">
+                                            <Label Text="Lunes" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="40" />
+                                            <CheckBox x:Name="chkLunes" VerticalOptions="Center" HorizontalOptions="Center" />
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label Text="Martes" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50" />
+                                            <CheckBox  x:Name="chkMartes" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label Text="Miercoles" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="65" />
+                                            <CheckBox  x:Name="chkMiercoles" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label Text="Jueves" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50" />
+                                            <CheckBox  x:Name="chkJueves" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label Text="Viernes" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50"/>
+                                            <CheckBox  x:Name="chkViernes" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label Text="Sabado" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50" />
+                                            <CheckBox  x:Name="chkSabado"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label Text="Domingo" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="60" />
+                                            <CheckBox  x:Name="chkDomingo" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        </HorizontalStackLayout>
+
+
+
+
+                                    </VerticalStackLayout>
+
+
+                                </Frame>
+
+                            </ScrollView>
+
+                        </toolkit:Expander>
+
+
+
+                        <Button Text="Registro"
+                  TextColor="White"
+                  BackgroundColor="#0061b1"
+                  x:Name="Register"
+                  Clicked="Register_Clicked"
+                  BorderColor="#0061b1"/>
+                        <Button  Text="Regresar"
+                  FontAttributes="Bold"
+                  TextColor="White"
+                  BackgroundColor="#b82138"
+                  x:Name="Salir"
+                  Clicked="Salir_Clicked"
+                  BorderColor="Transparent"/>
+
+
+
+                    </VerticalStackLayout>
+                </Frame>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+
+    </ContentPage.Content>
+</ContentPage>

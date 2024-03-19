@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clinic.Paginas.AreaPacientes.Medicos.DetalleContactosPage"
+             Title="DetalleContactosPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="doctor.png" HeightRequest="300" x:Name="FotoDoctor" MinimumHeightRequest="300" />
+
+                <StackLayout Padding="10" >
+                    <Label  FontSize="16" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontAttributes="Bold" Text="Nombre de Doctor:" TextColor="Black"/>
+                                <Span Text="{Binding Nombre}" x:Name="NombreDoctor" TextColor="Black"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label  FontSize="16" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontAttributes="Bold" Text="Especialidad:" TextColor="Black"/>
+                                <Span Text="{Binding Especialidad}" x:Name="EspecialidadDoctor" TextColor="Black"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label  FontSize="16" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontAttributes="Bold" Text="Sexo:" TextColor="Black"/>
+                                <Span Text="{Binding Sexo}" x:Name="SexoDoctor" TextColor="Black"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label >
+                    <Label  FontSize="16" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontAttributes="Bold" Text="Edad:" TextColor="Black"/>
+                                <Span Text="{Binding Edad}" x:Name="EdadDoctor" TextColor="Black"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label >
+                    <Label  FontSize="16" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontAttributes="Bold" Text="Consultorio:" TextColor="Black"/>
+                                <Span Text="{Binding Consultorio}" x:Name="ConsultorioDoctor" TextColor="Black"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label >
+                    <Label  FontSize="16" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontAttributes="Bold" Text="Jornada:" TextColor="Black"/>
+                                <Span Text="{Binding Jornada}" x:Name="JornadaDoctor" TextColor="Black"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label >
+                    <Label   FontSize="16" HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontAttributes="Bold" Text="Telefono:" TextColor="Black"/>
+                                <Span Text="{Binding Telefono}"  x:Name="TelefonoDoctor" TextColor="Black"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <StackLayout Orientation="Horizontal"  Spacing="10" HorizontalOptions="Center" Padding="20" >
+                        <Button Text="Contactar"
+                                x:Name="contactar"
+                                Clicked="contactar_Clicked"
+                                BackgroundColor="#4998d6"
+                                TextColor="White" />
+
+                        <Button Text="Regresar"
+                              x:Name="Regresar"
+                              Clicked="Regresar_Clicked"
+                              BackgroundColor="#4998d6"
+                              TextColor="White" />
+                    </StackLayout>
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

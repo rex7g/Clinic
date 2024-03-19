@@ -7,7 +7,7 @@
       <VerticalStackLayout
       Spacing="10"
       Padding="30"
-      BackgroundColor="#008bdc"
+      BackgroundColor="#0060b1"
       HorizontalOptions="FillAndExpand"
       VerticalOptions="FillAndExpand">
 

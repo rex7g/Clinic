@@ -79,11 +79,17 @@
 		<PackageReference Include="Microcharts.Maui" Version="1.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+		<PackageReference Include="QRCoder" Version="1.4.3" />
+		<PackageReference Include="SkiaSharp.Views.Maui.Core" Version="2.88.7" />
+		<PackageReference Include="System.Drawing.Common" Version="8.0.3" />
+		<PackageReference Include="ZXing.Net" Version="0.16.9" />
+		<PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Paginas\AreaDoctores\CitasAgendadas\" />
 	  <Folder Include="Paginas\AreaDoctores\ContactoDoctores\" />
+	  <Folder Include="Paginas\AreaDoctores\JornadaLaboral\" />
 	  <Folder Include="Paginas\AreaEmpleados\" />
 	</ItemGroup>
 
@@ -98,7 +104,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Paginas\AreaDoctores\LoginDoctoresPage.xaml">
+	  <MauiXaml Update="Paginas\AreaDoctores\HomePageDoctores.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Paginas\AreaDoctores\Login\LoginDoctoresPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Paginas\AreaDoctores\Login\RegistroDoctoresPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Paginas\AreaDoctores\Login\ResetContraseñaDoctores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Paginas\AreaPacientes\Ajustes\AcercaDePage.xaml">
@@ -126,6 +141,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Paginas\AreaPacientes\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Paginas\AreaPacientes\Medicos\ContactosMedicosPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Paginas\AreaPacientes\Medicos\DetalleContactosPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Paginas\Login\LoginPage.xaml">
