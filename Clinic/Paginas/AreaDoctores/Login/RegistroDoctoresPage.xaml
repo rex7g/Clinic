@@ -116,8 +116,10 @@
                                         <Label Text="Escoja los dias laborables"/>
 
                                         <HorizontalStackLayout Spacing="5">
+                                            <CheckBox x:Name="chkLunes"  VerticalOptions="Center" HorizontalOptions="Center" />
+
                                             <Label Text="Lunes" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="40" />
-                                            <CheckBox x:Name="chkLunes" VerticalOptions="Center" HorizontalOptions="Center" />
+                                            <TimePicker x:Name="tpHoraInicio" Format="h:mm tt" /> 
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
                                             <Label Text="Martes" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="50" />

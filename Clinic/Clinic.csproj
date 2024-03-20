@@ -104,6 +104,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Paginas\AreaDoctores\Cuenta\CuentaDoctorPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Paginas\AreaDoctores\HomePageDoctores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

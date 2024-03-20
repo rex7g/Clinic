@@ -1,15 +1,19 @@
+using Clinic.Servicios;
+
 namespace Clinic.Paginas.AreaPacientes.Ajustes;
 
 public partial class AjustesPage : ContentPage
 {
-	public AjustesPage()
+    public IApiService ApiService;
+	public AjustesPage(IApiService service)
 	{
 		InitializeComponent();
+        ApiService = service;
 	}
 
     private async void Cuenta_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new CuentaPage());
+        await Navigation.PushModalAsync(new CuentaPage(ApiService));
     }
 
     private async void Privacidad_Clicked(object sender, EventArgs e)

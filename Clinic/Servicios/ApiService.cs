@@ -639,10 +639,74 @@ namespace Clinic.Servicios
             return new FileResult(filePath);
         }
 
-      
+        public async Task<bool> GuardarFotosUsuario(string codigo , byte[] foto)
+        {
+            //try
+            //{
+            //    var formData = new MultipartFormDataContent();
+            //    formData.Add(new StringContent(codigo), "codigo"); // Añade el código como texto
+            //    formData.Add(new ByteArrayContent(foto), "archivo", "foto.jpg"); // Añade la foto como archivo
 
+            //    var NuevaFoto = new Fotos
+            //    {
+            //        codigo=codigo,
+            //        Foto=foto,
+            //    };
 
+            //    Uri uri = new Uri($"{Constantes.API_BASE_ADDRESS}/api/Fotos/GuardarFoto");
 
+            //    // Serializa el objeto cita a JSON
+            //    var jsonCita = JsonConvert.SerializeObject(NuevaFoto);
+            //    var content = new StringContent(jsonCita, Encoding.UTF8, "application/json");
+
+            //    // Realiza la solicitud POST
+            //    var response = await client.PostAsync(uri, formData);
+
+            //    if (response.IsSuccessStatusCode)
+            //    {
+            //        // Si la solicitud fue exitosa, devuelve true
+            //        return true;
+            //    }
+            //    else
+            //    {
+            //        // Si la solicitud no fue exitosa, lanza una excepción con el mensaje de error
+            //        string errorMessage = await response.Content.ReadAsStringAsync();
+            //        return false;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new Exception("Error al crear la cita médica: " + ex.Message);
+
+            //}
+            try
+            {
+                // Crear el contenido del formulario multipart
+                var formData = new MultipartFormDataContent();
+                formData.Add(new StringContent(codigo), "codigo"); // Añade el código como texto
+                formData.Add(new ByteArrayContent(foto), "archivo", "foto.jpg"); // Añade la foto como archivo
+
+                // Realiza la solicitud POST
+                var response = await client.PostAsync($"{Constantes.API_BASE_ADDRESS}/api/Fotos/GuardarFoto", formData);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // Si la solicitud fue exitosa, devuelve true
+                    return true;
+                }
+                else
+                {
+                    // Si la solicitud no fue exitosa, lanza una excepción con el mensaje de error
+                    string errorMessage = await response.Content.ReadAsStringAsync();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al crear la cita médica: " + ex.Message);
+            }
+
+        }
         #endregion
 
         public class httpServices

@@ -7,8 +7,8 @@ public partial class PoliticasPrivacidadPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void Regresar_Clicked(object sender, EventArgs e)
+    private async void Regresar_Clicked(object sender, EventArgs e)
     {
-
+		await Navigation.PopModalAsync();
     }
 }

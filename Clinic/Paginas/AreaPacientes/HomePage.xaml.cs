@@ -32,7 +32,7 @@ public partial class HomePage : ContentPage
 
     private async void BtnAjustes_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new AjustesPage());
+        await Navigation.PushModalAsync(new AjustesPage(_ApiService));
     }
 
     private async void BtnHistoria_Clicked(object sender, EventArgs e)

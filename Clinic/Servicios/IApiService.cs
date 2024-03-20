@@ -14,6 +14,9 @@ namespace Clinic.Servicios
         Task<IEnumerable<Usuarios>> GetAllUsers();
         Task<Usuarios> UpdateUserPassword(string email, string newPassowrd);
         Task<Usuarios> CrearUsuario(Usuarios usuario);
+
+        Task<bool> GuardarFotosUsuario(string codigo, byte[] foto);
+
        // Task<Usuarios> UpdateUsuario(string codigo);
         Task<bool> EliminarUsuario(string codigo);
 

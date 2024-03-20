@@ -14,7 +14,7 @@ namespace Clinic
             ApiService = service;
 
            // MainPage = new AppShell();
-           MainPage=new OpcionPage(ApiService);
+           MainPage=new LoginPage(ApiService);
         }
     }
 }
