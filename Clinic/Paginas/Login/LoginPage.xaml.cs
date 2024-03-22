@@ -17,10 +17,21 @@ public partial class LoginPage : ContentPage
         var usuario = user.Text.Trim();
         var Password = password.Text.Trim();
         var ValidaUsuario = await _apiService.GetUsuario(usuario);
-        var NombreUsuario = SecureStorage.SetAsync("NombreUsuario", usuario);
-        var userRole = SecureStorage.SetAsync("rol", ValidaUsuario.Codigo);
+        var email= ValidaUsuario.Email.Trim();
+        var telefono=ValidaUsuario.Telefono.Trim();
+        var fechaNacimiento = ValidaUsuario.FechaNacimiento.ToString();
+        var Userpassword=ValidaUsuario.Contraseña.Trim();
 
-        if(ValidaUsuario!= null)
+
+        await SecureStorage.SetAsync("NombreUsuario", usuario);
+        await SecureStorage.SetAsync("rol", ValidaUsuario.Codigo);
+        await SecureStorage.SetAsync("telefono", telefono);
+        await SecureStorage.SetAsync("fechaNacimiento", fechaNacimiento);
+        await SecureStorage.SetAsync("Userpassword", Userpassword);
+        await SecureStorage.SetAsync("Email", email);
+
+
+        if (ValidaUsuario!= null)
         {
             await Navigation.PushModalAsync(new HomePage(_apiService));
         }

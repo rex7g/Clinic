@@ -47,7 +47,7 @@ namespace Clinic.Servicios
         Task SaveTokenToSecureStorage(string token);
         Task<bool> VerifyToken(string userInputToken);
 
-        string GenerateToken();
+        //string GenerateToken();
         void SendPasswordResetEmail(string email,string token);
 
 

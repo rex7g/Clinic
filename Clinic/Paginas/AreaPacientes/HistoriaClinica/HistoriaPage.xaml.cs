@@ -84,7 +84,7 @@ public partial class HistoriaPage : ContentPage
         }
         catch (Exception ex)
         {
-
+            throw ex;
         }
     }
 

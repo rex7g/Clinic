@@ -40,7 +40,7 @@ public partial class DetalleContactosPage : ContentPage
 
 
     }
-    public async void LoadDetallesDoctores(Doctores doctore)
+    public  void LoadDetallesDoctores(Doctores doctore)
     {
         NombreDoctor.Text = doctore.Nombre;
         EspecialidadDoctor.Text = doctore.Especialidad;

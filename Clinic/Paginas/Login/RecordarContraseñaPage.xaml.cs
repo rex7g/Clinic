@@ -20,7 +20,8 @@ public partial class RecordarContraseñaPage : ContentPage
     private void EnviarEmail_Clicked(object sender, EventArgs e)
     {
         var email = emailEntry.Text;
-        var token = ApiService.GenerateToken();
+        //var token = ApiService.GenerateToken();
+        var token = "3433647";
         ApiService.SendPasswordResetEmail(email, token);
         ApiService.SaveTokenToSecureStorage(token);
         TokenEntry.IsVisible = true;
